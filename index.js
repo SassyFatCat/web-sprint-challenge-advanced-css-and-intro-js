@@ -235,9 +235,10 @@ function getArtistByIndex(array, index) {
 
 function get20s(arr){
 let livedIn20Century = [];
-arr.forEach(element => element.years.split(' ')[2] >= 1900 && element.years.split(' ')[0] >= 1900 && element.years.split(' ')[0] < 2000 ? livedIn20Century.push(element) : null);
+arr.forEach(element => (element.years.split(' ')[0] >= 1900 & element.years.split(' ')[0] < 2000) || (element.years.split(' ')[2] >= 1900 & element.years.split(' ')[2] < 2000) ? livedIn20Century.push(element.name) : null);
 return livedIn20Century;
 }
+/* If I wanted to return an array of artists based on the years they lived in, I would add two more parameters and use the parameters instead of '1900' and '2000', respectively*/
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
