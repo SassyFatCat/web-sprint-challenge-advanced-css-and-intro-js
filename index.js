@@ -343,3 +343,5 @@ function randomize(/* Code here */){
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+let bornIn1900s = artists.filter(element => element.years.split(' ')[0] >= 1900 & element.years.split(' ')[0] < 2000);
+console.log(bornIn1900s)
